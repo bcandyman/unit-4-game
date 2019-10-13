@@ -62,22 +62,6 @@ $("#loses").text(loses);
 
 
 ///////////Event Handling//////////
-$(".gem-button-red").on("click",function(){
-    console.log("Red Button Clicked!!")
-    calculateUserScore(gemValues.red)
-})
-
-$(".gem-button-blue").on("click",function(){
-    console.log("Blue Button Clicked!!")
-    calculateUserScore(gemValues.blue)
-})
-
-$(".gem-button-yellow").on("click",function(){
-    console.log("Yellow Button Clicked!!")
-    calculateUserScore(gemValues.yellow)
-})
-
-$(".gem-button-green").on("click",function(){
-    console.log("Green Button Clicked!!")
-    calculateUserScore(gemValues.green)
+$(".gem-tile").on("click", function(event){
+    calculateUserScore(gemValues[$(this).val()])
 })
